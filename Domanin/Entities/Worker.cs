@@ -22,6 +22,7 @@ namespace Domain.Entities
             Credentials = credentials;
             Company = company;
             Procedures = new List<Procedure>();
+            paymentMachineForWorkers = new List<PaymentMachineForWorker>();
         }
 
         public string Id { get; set; }  
@@ -38,6 +39,7 @@ namespace Domain.Entities
 
         public IEnumerable<Procedure> Procedures { get; set; }
 
+        public IEnumerable<PaymentMachineForWorker> paymentMachineForWorkers { get; set; }
 
     }
 }

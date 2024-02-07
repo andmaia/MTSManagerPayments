@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossCutting.Enums
+namespace Domain.DTO.Payment
 {
-    public enum Permission
+    internal class PaymentResponseDTO
     {
-        CREATING,
-        ARTIST,
-        MANAGER
     }
 }

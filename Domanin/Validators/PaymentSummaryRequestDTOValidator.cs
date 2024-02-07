@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossCutting.Enums
+namespace Domain.Validators
 {
-    public enum Permission
+    internal class PaymentSummaryRequestDTOValidator
     {
-        CREATING,
-        ARTIST,
-        MANAGER
     }
 }

@@ -18,6 +18,7 @@ namespace Domain.Entities
             IsActive = isActive;
             Company = company;
             PaymentsMethods = new List<PaymentMethod>();
+            PaymentMachineForWorkers = new List<PaymentMachineForWorker>();
         }
 
         public string Id { get; set; }
@@ -28,5 +29,6 @@ namespace Domain.Entities
         public bool IsActive { get; set; }
         public Company Company { get; set; }
         public IEnumerable<PaymentMethod> PaymentsMethods { get; set; }
+        public IEnumerable<PaymentMachineForWorker> PaymentMachineForWorkers { get; set; } 
     }
 }

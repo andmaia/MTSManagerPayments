@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CrossCutting.Enums
+namespace Domain.DTO.Procedure
 {
-    public enum Permission
+    internal class ProcedureRequestDTO
     {
-        CREATING,
-        ARTIST,
-        MANAGER
     }
 }

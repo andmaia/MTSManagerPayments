@@ -9,7 +9,7 @@ namespace Domain.Entities
 {
     public class PaymentUnity
     {
-        public PaymentUnity(string id, float value, float artistPercentage, PaymentMode paymentMode, float valueToArtist, float valueWithTax, float totalTax, float valueToCompany, Payment payment)
+        public PaymentUnity(string id, float value, float artistPercentage, PaymentMode paymentMode, float valueToArtist, float valueWithTax, float totalTax, float valueToCompany, Payment payment,PaymentMethod paymentMethod)
         {
             Id = id;
             Value = value;
@@ -20,6 +20,7 @@ namespace Domain.Entities
             TotalTax = totalTax;
             ValueToCompany = valueToCompany;
             Payment = payment;
+            PaymentMethod = paymentMethod;
         }
 
         public string Id { get; set; }
@@ -31,6 +32,8 @@ namespace Domain.Entities
         public float TotalTax { get; set; }
         public float ValueToCompany { get; set; }
         public Payment Payment { get; set; }   
+
+        public PaymentMethod PaymentMethod { get; set; }
 
     }
 }

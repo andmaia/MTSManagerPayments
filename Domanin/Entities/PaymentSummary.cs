@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrossCutting.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,9 +9,20 @@ namespace Domain.Entities
 {
     public class PaymentSummary
     {
+        public PaymentSummary(string paymentReceiptURL, PaymentStatus paymentStatus)
+        {
+            PaymentReceiptURL = paymentReceiptURL;
+            PaymentStatus = paymentStatus;
+        }
+
         public string? Id { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime FinishedDate { get; set; }
+        public DateTime UpdatedDate { get; set; }
+
+        public DateTime PaidDate {  get; set; }
+        public bool IsActive { get; set; }
+        public string PaymentReceiptURL { get; set; }
         public float TotalValue { get; set; }
         public float Entrace { get; set; }
         public bool EntraceAccount { get; set; }
@@ -23,5 +35,7 @@ namespace Domain.Entities
         public float ValueWorkerRecived { get; set; }
         public float RemainingValueToArtist { get; set; }
         public float RemaingValueToCompany { get; set; }
+        public PaymentStatus PaymentStatus { get; set; }
+
     }
 }

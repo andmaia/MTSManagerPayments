@@ -18,6 +18,7 @@ namespace Domain.Entities
             IsActive = isActive;
             Tax = tax;
             PaymentMachine = paymentMachine;
+            PaymentUnities = new List<PaymentUnity>();
         }
 
         public string Id { get; set; }
@@ -28,5 +29,6 @@ namespace Domain.Entities
         public bool IsActive { get; set; }
         public float Tax { get;set; }
         public PaymentMachine PaymentMachine { get; set; }
+        public IEnumerable<PaymentUnity> PaymentUnities { get; set; }
     }
 }
