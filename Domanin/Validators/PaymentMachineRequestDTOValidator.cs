@@ -18,6 +18,7 @@ namespace Domain.Validators
             RuleFor(x => x.CompanyId)
                 .NotEmpty().WithMessage("CompanyId cannot be empty.")
                 .Length(36).WithMessage("CompanyId must be a string with 36 characters.");
+
         } 
     }
 }

@@ -23,6 +23,7 @@ namespace Domain.Validators
 
             RuleFor(x => x.Password)
                 .NotEmpty().WithMessage("Password field is required.")
+                .MinimumLength(20).WithMessage("Passwrod must have until 20 characters")
                 .MinimumLength(8).WithMessage("The password must be at least 8 characters long.")
                 .Matches(@"[A-Z]+").WithMessage("The password must contain at least one uppercase letter.")
                 .Matches(@"[a-z]+").WithMessage("The password must contain at least one lowercase letter.")

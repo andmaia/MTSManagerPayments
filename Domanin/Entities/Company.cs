@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class Company
     {
-        public Company(string id, string name, string cnpj, DateTime createdDate, DateTime lastUpdated, DateTime finishedDate, bool isActive, Credentials credentials)
+        public Company(string id,string credentialsId, string name, string cnpj, DateTime createdDate, DateTime lastUpdated, DateTime finishedDate, bool isActive)
         {
             Id = id;
             Name = name;
@@ -17,7 +17,7 @@ namespace Domain.Entities
             LastUpdated = lastUpdated;
             FinishedDate = finishedDate;
             IsActive = isActive;
-            Credentials = credentials;
+            CredentialsId = credentialsId;
             Workers = new List<Worker> ();
             PaymentMachines = new List<PaymentMachine> ();
         }
@@ -29,7 +29,8 @@ namespace Domain.Entities
         public DateTime LastUpdated { get; set; }
         public DateTime FinishedDate { get; set; }
         public bool IsActive { get; set; }
-        public Credentials Credentials { get; set; }
+        public string CredentialsId { get; set; }
+        public Credentials? Credentials { get; set; }
         public IEnumerable<Worker> Workers { get; set; }
         public IEnumerable<PaymentMachine> PaymentMachines { get; set; }
     }

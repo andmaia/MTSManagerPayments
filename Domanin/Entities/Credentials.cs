@@ -12,6 +12,9 @@ namespace Domain.Entities
 {
     public class Credentials
     {
+        public Credentials()
+        {
+        }
 
         public Credentials(string id, string password, string email, Permission permission)
         {

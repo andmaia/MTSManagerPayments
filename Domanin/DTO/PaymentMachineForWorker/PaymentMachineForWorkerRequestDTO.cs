@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Domain.DTO.PaymentMachineForWork
 {
-    internal class PaymentMachineForWorkerRequestDTO
+    public class PaymentMachineForWorkerRequestDTO
     {
+        public bool IsActive { get; set; }
+        public string? WorkerId { get; set; }
+        public string? PaymentMachineId { get; set; }
     }
 }

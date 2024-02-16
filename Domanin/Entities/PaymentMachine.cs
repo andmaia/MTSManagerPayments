@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class PaymentMachine
     {
-        public PaymentMachine(string id, string name, DateTime createdDate, DateTime lastUpdated, DateTime finishedDate, bool isActive, Company company)
+        public PaymentMachine(string id,string companyId, string name, DateTime createdDate, DateTime lastUpdated, DateTime finishedDate, bool isActive)
         {
             Id = id;
             Name = name;
@@ -16,7 +16,7 @@ namespace Domain.Entities
             LastUpdated = lastUpdated;
             FinishedDate = finishedDate;
             IsActive = isActive;
-            Company = company;
+            CompanyId = companyId;
             PaymentsMethods = new List<PaymentMethod>();
             PaymentMachineForWorkers = new List<PaymentMachineForWorker>();
         }
@@ -27,7 +27,9 @@ namespace Domain.Entities
         public DateTime LastUpdated { get; set; }
         public DateTime FinishedDate { get; set; }
         public bool IsActive { get; set; }
-        public Company Company { get; set; }
+
+        public string CompanyId { get; set; }
+        public Company? Company { get; set; }
         public IEnumerable<PaymentMethod> PaymentsMethods { get; set; }
         public IEnumerable<PaymentMachineForWorker> PaymentMachineForWorkers { get; set; } 
     }

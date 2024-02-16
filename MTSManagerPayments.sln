@@ -3,15 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34031.279
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domanin\Domain.csproj", "{B9960476-9CF3-492C-8EE4-5D69BFA5894B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domanin\Domain.csproj", "{B9960476-9CF3-492C-8EE4-5D69BFA5894B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{8E2C3C3C-6457-497F-A96C-A17208E13EB3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Service", "Service\Service.csproj", "{8E2C3C3C-6457-497F-A96C-A17208E13EB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infra", "Infra\Infra.csproj", "{4C82F19E-55D9-45B0-AF2B-A2CFCAB9AE64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infra", "Infra\Infra.csproj", "{4C82F19E-55D9-45B0-AF2B-A2CFCAB9AE64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{5181017F-F81C-4994-9ADC-A66E0125D070}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CrossCutting", "CrossCutting\CrossCutting.csproj", "{5181017F-F81C-4994-9ADC-A66E0125D070}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "API\API.csproj", "{86F9B3BE-C977-45F5-902F-D763A9D7DF39}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "API", "API\API.csproj", "{86F9B3BE-C977-45F5-902F-D763A9D7DF39}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{A8E2C32C-8535-45C5-B76F-781CBD4BEC4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests.Integration", "Tests.Integration\Tests.Integration.csproj", "{69AAEE6C-D61C-448A-8010-49B6B11FA967}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,9 +43,16 @@ Global
 		{86F9B3BE-C977-45F5-902F-D763A9D7DF39}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{86F9B3BE-C977-45F5-902F-D763A9D7DF39}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{86F9B3BE-C977-45F5-902F-D763A9D7DF39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69AAEE6C-D61C-448A-8010-49B6B11FA967}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69AAEE6C-D61C-448A-8010-49B6B11FA967}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69AAEE6C-D61C-448A-8010-49B6B11FA967}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69AAEE6C-D61C-448A-8010-49B6B11FA967}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{69AAEE6C-D61C-448A-8010-49B6B11FA967} = {A8E2C32C-8535-45C5-B76F-781CBD4BEC4F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F6C99C2-3C85-4983-AA3C-87B888152C60}

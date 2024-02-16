@@ -9,13 +9,12 @@ namespace Domain.Entities
 {
     public class Payment
     {
-        public Payment(string id, DateTime createdDate, DateTime finishedDate, float percentageDefault, PaymentSummary paymentSummary, float value, float entranceValue)
+        public Payment(string id, DateTime createdDate, DateTime finishedDate, float percentageDefault, float value, float entranceValue)
         {
             Id = id;
             CreatedDate = createdDate;
             FinishedDate = finishedDate;
             PercentageDefault = percentageDefault;
-            PaymentSummary = paymentSummary;
             PaymentUnities = new List<PaymentUnity>();
             Value = value;
             EntranceValue = entranceValue;
@@ -28,7 +27,6 @@ namespace Domain.Entities
         public float PercentageDefault { get; set; }
         public float Value { get; set; }
         public float EntranceValue { get; set; }
-        public PaymentSummary PaymentSummary { get; set; }
         
         public IEnumerable<PaymentUnity> PaymentUnities { get; set; }
 

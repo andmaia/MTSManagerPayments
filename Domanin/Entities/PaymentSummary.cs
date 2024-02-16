@@ -9,20 +9,25 @@ namespace Domain.Entities
 {
     public class PaymentSummary
     {
-        public PaymentSummary(string paymentReceiptURL, PaymentStatus paymentStatus)
+        public PaymentSummary(string paymentReceiptURL, PaymentStatus paymentStatus,string paymentId)
         {
             PaymentReceiptURL = paymentReceiptURL;
             PaymentStatus = paymentStatus;
+            PaymentId  = paymentId;
         }
 
+
         public string? Id { get; set; }
+
+        public string PaymentId { get; set; }
+        public Payment? Payment { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime FinishedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
 
         public DateTime PaidDate {  get; set; }
         public bool IsActive { get; set; }
-        public string PaymentReceiptURL { get; set; }
+        public string? PaymentReceiptURL { get; set; }
         public float TotalValue { get; set; }
         public float Entrace { get; set; }
         public bool EntraceAccount { get; set; }
@@ -36,6 +41,5 @@ namespace Domain.Entities
         public float RemainingValueToArtist { get; set; }
         public float RemaingValueToCompany { get; set; }
         public PaymentStatus PaymentStatus { get; set; }
-
     }
 }

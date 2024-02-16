@@ -8,7 +8,7 @@ namespace Domain.Entities
 {
     public class PaymentMethod
     {
-        public PaymentMethod(string id, string name, DateTime createdDate, DateTime lastUpdated, DateTime finishedDate, bool isActive, float tax, PaymentMachine paymentMachine)
+        public PaymentMethod(string id,string paymentMachineId, string name, DateTime createdDate, DateTime lastUpdated, DateTime finishedDate, bool isActive, float tax)
         {
             Id = id;
             Name = name;
@@ -17,7 +17,7 @@ namespace Domain.Entities
             FinishedDate = finishedDate;
             IsActive = isActive;
             Tax = tax;
-            PaymentMachine = paymentMachine;
+            PaymentMachineId = paymentMachineId;
             PaymentUnities = new List<PaymentUnity>();
         }
 
@@ -28,7 +28,9 @@ namespace Domain.Entities
         public DateTime FinishedDate { get; set; }
         public bool IsActive { get; set; }
         public float Tax { get;set; }
-        public PaymentMachine PaymentMachine { get; set; }
+
+        public string PaymentMachineId { get; set; }
+        public PaymentMachine? PaymentMachine { get; set; }
         public IEnumerable<PaymentUnity> PaymentUnities { get; set; }
     }
 }

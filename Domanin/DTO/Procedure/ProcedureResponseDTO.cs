@@ -1,4 +1,5 @@
-﻿using Domain.DTO.Worker;
+﻿using Domain.DTO.Payment;
+using Domain.DTO.Worker;
 using Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -17,7 +18,7 @@ namespace Domain.DTO.Procedure
         public DateTime FinishedDate { get; set; }
         public bool IsActive { get; set; }
 
-        public WorkerResponseDTO Worker { get; set; }
-        public PaymentResponseDTO Payment { get; set; }
+        public WorkerResponseDTO? Worker { get; set; }
+        public PaymentResponseDTO? Payment { get; set; }
     }
 }

@@ -12,12 +12,12 @@ namespace Domain.Validators
     {
         public ProcedureRequestDTOValidator() 
         {
-            RuleFor(x => x.PaymentId)
-                 .NotEmpty().WithMessage("PaymentId cannot be empty.")
-                 .Length(36).WithMessage("PaymentId must be a string with 36 characters.");
+         
             RuleFor(x => x.WorkerId)
                .NotEmpty().WithMessage("WorkerId cannot be empty.")
                .Length(36).WithMessage("WorkerId must be a string with 36 characters.");
+            RuleFor(x => x.CustomerName)
+                .NotEmpty().WithMessage("The name can not be empty");
 
         }
     }
