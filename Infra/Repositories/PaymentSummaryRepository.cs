@@ -73,6 +73,8 @@ namespace Infra.Repositories
             return paymentSummaries;
         }
 
+    
+
         public async Task<IEnumerable<PaymentSummary>> GetAllPaymentSummariesByWorker(string id)
         {
             var paymentSummaries = await(

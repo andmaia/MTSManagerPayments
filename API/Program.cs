@@ -1,9 +1,12 @@
+using Domain.AutoMapperProfiles;
 using Domain.Repositories;
 using Domain.Validators;
+using FluentAssertions.Common;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Infra;
 using Infra.Repositories;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
@@ -31,6 +34,7 @@ public class Program
         builder.Services.AddScoped<IProcedureRepository, ProcedureRepository>();
         builder.Services.AddScoped<IPaymentRepository,PaymentRepository>();
 
+        builder.Services.AddAutoMapper(typeof(MappingProfile));
 
 
 
